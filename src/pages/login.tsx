@@ -27,7 +27,7 @@ export default function Login() {
                         <IonLabel >Password:</IonLabel>
                         <IonInput name='pwd' />
                     </IonItem>
-                    <IonButton type='submit'>Login</IonButton>
+                    <IonButton href='/index'>Login</IonButton>
                 </form>
             </IonContent>
             }

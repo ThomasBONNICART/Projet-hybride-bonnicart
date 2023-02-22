@@ -8,6 +8,7 @@ import {
   IonTabButton,
   IonTabs,
   IonContent,
+  
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -31,6 +32,10 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Login from './pages/login';
+import Index from './pages/index';
+import Match from './pages/Match';
+import Competition from './pages/competition';
 
 setupIonicReact();
 
@@ -38,11 +43,13 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/login">
-          <Login />
+        <Route exact path="/login" component={Login}>
         </Route>
-        <Route exact path="/main">
-          <Main />
+        <Route exact path="/index" component={Index}>
+        </Route>
+        <Route exact path="/match" component={Match}>
+        </Route>
+        <Route exact path="/competition" component={Competition}>
         </Route>
         <Route exact path="/">
           <Redirect to="/login" />
