@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTabBar, IonTabButton, IonLabel } from '@ionic/react';
+import { IonItem, IonList, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTabBar, IonTabButton, IonLabel, IonButton } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './match.css';
 
@@ -16,9 +16,27 @@ const Match: React.FC = () => {
             <IonTitle size="large">match</IonTitle>
           </IonToolbar>
         </IonHeader>
-        
+        <IonList>
+            <IonItem>
+              <IonLabel>Match 1</IonLabel>
+              <IonButton>modifier</IonButton>
+              <IonButton>supprimer</IonButton>
+            </IonItem>
+            <IonItem>
+              <IonLabel>Match 2</IonLabel>
+              <IonButton>modifier</IonButton>
+              <IonButton>supprimer</IonButton>
+            </IonItem>
+          </IonList>
+          
+        <IonButton href='/creematch'>crée un match</IonButton>
       </IonContent>
       <IonTabBar slot="bottom">
+      <IonTabButton tab='index' href='/index'>
+          <IonLabel>
+            Acceuil
+          </IonLabel>
+        </IonTabButton>
         <IonTabButton tab='match' href='/match'>
           <IonLabel>
             Match

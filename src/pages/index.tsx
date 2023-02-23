@@ -10,7 +10,15 @@ const Index: React.FC = () => {
           <IonTitle>Acceuil</IonTitle>
         </IonToolbar>
       </IonHeader>
+      <IonContent >
+        Bienvenue dans pronosticax
+      </IonContent>
       <IonTabBar slot="bottom">
+      <IonTabButton tab='index' href='/index'>
+          <IonLabel>
+            Acceuil
+          </IonLabel>
+        </IonTabButton>
         <IonTabButton tab='match' href='/match'>
           <IonLabel>
             Match

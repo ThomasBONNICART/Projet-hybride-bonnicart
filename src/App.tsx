@@ -36,6 +36,7 @@ import Login from './pages/login';
 import Index from './pages/index';
 import Match from './pages/Match';
 import Competition from './pages/competition';
+import Creematch from './pages/creematch';
 
 setupIonicReact();
 
@@ -50,6 +51,8 @@ const App: React.FC = () => (
         <Route exact path="/match" component={Match}>
         </Route>
         <Route exact path="/competition" component={Competition}>
+        </Route>
+        <Route exact path="/creematch" component={Creematch}>
         </Route>
         <Route exact path="/">
           <Redirect to="/login" />

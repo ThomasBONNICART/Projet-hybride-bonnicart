@@ -1,36 +1,44 @@
-import { IonItem, IonList, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTabBar, IonTabButton, IonLabel, IonButton } from '@ionic/react';
+import {IonInput, IonItem, IonCheckbox, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTabBar, IonTabButton, IonLabel, IonButton } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './competition.css';
+import './match.css';
 
-const Competition: React.FC = () => {
+const Creematch: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>compétition</IonTitle>
+          <IonTitle>Compétition</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">compétition</IonTitle>
+            <IonTitle size="large">création d'une Compétition</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonList>
+
+        <form className="ion-padding">
             <IonItem>
-              <IonLabel>compétition 1</IonLabel>
-              <IonButton>modifier</IonButton>
-              <IonButton>supprimer</IonButton>
+                <IonLabel position="floating">match 1</IonLabel>
+                <IonInput />
             </IonItem>
             <IonItem>
-              <IonLabel>compétition 2</IonLabel>
-              <IonButton>modifier</IonButton>
-              <IonButton>supprimer</IonButton>
+                <IonLabel position="floating">match 2</IonLabel>
+                <IonInput />
             </IonItem>
-          </IonList>
-          
-        <IonButton href='/creecompetiton'>crée une compétition</IonButton>
-        
+            <IonItem>
+                <IonLabel position="floating">match final</IonLabel>
+                <IonInput />
+            </IonItem>
+            
+            <IonButton className="ion-margin-top" type="submit" expand="block">
+                Envoyer
+            </IonButton>
+            
+        </form>
+        <IonButton className="ion-margin-top" href='/match'>
+                retour
+        </IonButton>
       </IonContent>
       <IonTabBar slot="bottom">
       <IonTabButton tab='index' href='/index'>
@@ -58,4 +66,4 @@ const Competition: React.FC = () => {
   );
 };
 
-export default Competition;
+export default Creematch;
